@@ -1,7 +1,15 @@
-const screen = document.getElementById('screen');
-let expr = '';
-document.querySelectorAll('.btn[data-val]').forEach(b=>{
-  b.addEventListener('click', ()=>{ expr += b.dataset.val; screen.value = expr; });
+const postsKey = 'simple_blogs';
+function render(){
+  const posts = JSON.parse(localStorage.getItem(postsKey)||'[]');
+  document.getElementById('posts').innerHTML = posts.map(p=>`<article><h3>${p.title}</h3><p>${p.content}</p></article>`).join('\n');
+}
+document.getElementById('post').addEventListener('click', ()=>{
+  const t=document.getElementById('title').value.trim();
+  const c=document.getElementById('content').value.trim();
+  if(!t||!c) return alert('Add title and content');
+  const posts = JSON.parse(localStorage.getItem(postsKey)||'[]');
+  posts.unshift({title:t,content:c});
+  localStorage.setItem(postsKey, JSON.stringify(posts));
+  render();
 });
-document.getElementById('clr').addEventListener('click', ()=>{ expr=''; screen.value=''; });
-document.getElementById('eq').addEventListener('click', ()=>{ try{ screen.value = eval(expr); expr = screen.value+'' }catch(e){ screen.value='Error' } });
+render();

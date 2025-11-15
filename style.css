@@ -1,5 +1,3 @@
-body{display:flex;align-items:center;justify-content:center;height:100vh;margin:0;background:#f3f3f3}
-.calc{background:#fff;padding:16px;border-radius:8px;box-shadow:0 6px 12px rgba(0,0,0,0.08)}
-#screen{width:100%;padding:12px;font-size:18px;margin-bottom:8px}
-.keys{display:grid;grid-template-columns:repeat(4,64px);gap:8px}
-.btn{padding:12px;font-size:16px;cursor:pointer}
+body{display:flex;align-items:flex-start;justify-content:center;padding:32px;background:#f8fafc;margin:0}
+.blog{width:640px;background:white;padding:18px;border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,0.06)}
+input,textarea{width:100%;padding:8px;margin:6px 0}article{border-top:1px solid #eee;padding-top:8px;margin-top:8px}

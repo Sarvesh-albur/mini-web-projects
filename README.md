@@ -1,1 +1,1 @@
-Digital calculator using JS eval for simplicity. (Note: eval used for demo only.)
+Simple blogging page that saves posts in localStorage as JSON.
