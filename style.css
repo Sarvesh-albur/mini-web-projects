@@ -1,0 +1,5 @@
+body{font-family:system-ui,Segoe UI,Roboto;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;background:#eef}
+.app{background:white;padding:20px;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,0.08);width:320px;text-align:center}
+input{width:70%;padding:8px;margin:8px 0}
+button{padding:8px 12px}
+#result{margin-top:12px}
